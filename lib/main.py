@@ -179,7 +179,7 @@ class Main:
         brute_file_name = brute_file.name
         brute_file.seek(0)
 
-        openvpn_cmd = "%s --remote %s %s --auth-user-pass %s --tls-exit --connect-retry-max 0 --config %s" % (
+        openvpn_cmd = "%s --remote %s %s --auth-user-pass %s --tls-exit --config %s" % (
             self.openvpn_path, ip, port, brute_file_name, self.args.config)
         if self.args.verbose == 2:
             self.logger.output_file("CMD: %s" % openvpn_cmd)
